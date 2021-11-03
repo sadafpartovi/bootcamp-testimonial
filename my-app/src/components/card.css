@@ -1,0 +1,36 @@
+
+.photo {
+  min-width: 7rem;
+  min-height: 7rem;
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  cursor: pointer;
+
+}
+
+.pre {
+  top:30rem;
+  right: 10rem;
+}
+
+.next {
+  top:30rem;
+  right: 5rem;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.description {
+  line-height: 1.5rem;
+}
+
+.big-container {
+  margin:0 auto;
+}
+
