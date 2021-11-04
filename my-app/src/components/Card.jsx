@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./card.css";
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const peopleData = [
   {
@@ -65,25 +65,31 @@ const Card = () => {
     <>
       <div className="big-container" key={dataToShow.id}>
         <div className="cardContainer">
+        <div className="backgroundImg"></div>
           <p className="description">{dataToShow.description}</p>
 
+          <div className="imgContainer">
             <img className="photo" src={dataToShow.photo} />
-
+          </div>
         </div>
-        <p className="name">{dataToShow.name}</p>
-        <p className="title">{dataToShow.title}</p>
+        <div className="nameContainer">
+          <p className="name">{dataToShow.name}</p>
+          <p className="title">{dataToShow.title}</p>
+        </div>
       </div>
 
       {dataToShow.id > 1 ? (
         <p className="btn pre" onClick={() => handlePrevious()}>
-          Previous</p>
+          Previous
+        </p>
       ) : (
         ""
       )}
 
       {dataToShow.id < data.length ? (
-        <p className="btn next" onClick={() => handleNext()}> Next
-
+        <p className="btn next" onClick={() => handleNext()}>
+          {" "}
+          Next
         </p>
       ) : (
         ""
