@@ -66,11 +66,12 @@ const Card = () => {
       <div className="big-container" key={dataToShow.id}>
         <div className="cardContainer">
         <div className="backgroundImg"></div>
-          <p className="description">{dataToShow.description}</p>
+
 
           <div className="imgContainer">
             <img className="photo" src={dataToShow.photo} />
           </div>
+          <p className="description">{dataToShow.description}</p>
         </div>
         <div className="nameContainer">
           <p className="name">{dataToShow.name}</p>

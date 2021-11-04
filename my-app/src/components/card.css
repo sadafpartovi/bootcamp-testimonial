@@ -1,57 +1,48 @@
-
 * {
   color: #58427c;
-
-
 }
 
 .photo {
-  width:350px;
-  height:350px;
+  width: 350px;
+  height: 350px;
   position: relative;
   object-fit: cover;
   flex-grow: 2;
-
 }
 .imgContainer {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url('../images/pattern-bg.svg');
+  background-image: url("../images/pattern-bg.svg");
   background-repeat: no-repeat;
 }
-
-
 
 .btn {
   position: absolute;
   cursor: pointer;
-
 }
 
 .pre {
-  top:33rem;
+  top: 33rem;
   right: 15rem;
 }
 
 .next {
-  top:33rem;
+  top: 33rem;
   right: 10rem;
 }
 .cardContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-around;
   margin: 10rem 5rem;
-
-
 }
 
 .backgroundImg {
-  background-image: url('../images/pattern-bg.svg');
+  background-image: url("../images/pattern-bg.svg");
   background-repeat: no-repeat;
   height: 10rem;
-  width:10rem;
+  width: 10rem;
   z-index: -1;
   height: 90vh;
   width: 90vw;
@@ -59,10 +50,7 @@
   position: absolute;
   top: 100px;
   left: 450px;
-  opacity: .5;
-
-
-
+  opacity: 0.5;
 }
 
 .description {
@@ -74,7 +62,7 @@
 }
 
 .big-container {
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .name,
@@ -93,6 +81,70 @@
 
 .nameContainer {
   margin-left: 5rem;
-  margin-top: -14rem
+  margin-top: -14rem;
 }
 
+@media only screen and (max-width: 600px) {
+  * {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    height: 80vh !important;
+    margin: 0 auto;
+    overflow-y: hidden;
+  }
+
+  .photo {
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin: 3rem;
+  }
+
+  .backgroundImg {
+    display: none;
+  }
+
+  .btn {
+    top: 35rem;
+    margin: 0 auto;
+  }
+
+  .pre {
+
+    right: 24rem;
+  }
+
+  .next {
+
+    right: 7rem;
+  }
+
+
+  .description {
+    line-height: 2rem;
+
+    font-size: 20px;
+   margin: 1rem
+
+  }
+
+  .nameContainer {
+    margin-left: 0;
+    margin-top: 0;
+
+  }
+
+  .name,
+  .title {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .name {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
